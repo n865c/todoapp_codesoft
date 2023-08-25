@@ -131,6 +131,7 @@ class _TodoPageState extends State<TodoPage> {
     await deleteNoteFromLocal(index);
 
     setState(() {
+      selectedIndices.remove(index);
       notes.removeAt(index);
     });
   }
